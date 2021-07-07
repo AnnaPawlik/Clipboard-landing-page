@@ -1,0 +1,24 @@
+{
+  "name": "clipboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files css/*.css *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaPawlik/Clipboard-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaPawlik/Clipboard-landing-page/issues"
+  },
+  "homepage": "https://github.com/AnnaPawlik/Clipboard-landing-page#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.4",
+    "node-sass": "^6.0.1"
+  }
+}
