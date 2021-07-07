@@ -1,0 +1,31 @@
+.button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    .btn {
+        border: none;
+        border-radius: 3rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        color: $btn-text;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .btn-ios {
+        background-color: $btn-primary;
+
+        &:hover {
+            background-color: $btn-primary-hover;
+        }
+    }
+    
+    .btn-mac {
+        background-color: $btn-secondary;
+
+        &:hover {
+            background-color: $btn-secondary-hover;
+        }
+    }    
+}
