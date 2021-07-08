@@ -37,6 +37,8 @@ li {
 a {
   text-decoration: none;
   color: #4c545d; }
+  a:hover {
+    color: #26baa4; }
 
 img {
   height: auto;
@@ -44,8 +46,9 @@ img {
 
 .button {
   display: flex;
-  flex-direction: column;
-  margin-top: 3rem; }
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap; }
   .button .btn {
     border: none;
     border-radius: 3rem;
@@ -53,7 +56,8 @@ img {
     padding: 1.5rem;
     color: white;
     margin: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    min-width: 250px; }
   .button .btn-ios {
     background-color: #26baa4; }
     .button .btn-ios:hover {
@@ -71,17 +75,34 @@ img {
   .header-logo {
     margin-top: 4.5rem; }
 
+.snippets-details > img {
+  padding: 1rem; }
 .snippets-details-description {
-  margin-top: 2.5rem; }
+  margin-top: 2.5rem;
+  margin-left: 1rem; }
+
+.workflow-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .workflow-list .workflow-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem; }
 
 .partners-items {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center; }
+  justify-content: space-around; }
   .partners-items img {
-    width: 25%;
-    height: 25%;
-    margin-top: 4.5rem; }
+    margin: 4.5rem 0; }
 
 .footer-menu {
   background-color: #f3f5f7;
@@ -91,10 +112,39 @@ img {
     .footer-menu .footer-logo img {
       width: 5rem; }
   .footer-menu .footer-links {
-    padding: 1em; }
+    padding: 1em 0; }
   .footer-menu .footer-social-links {
     display: flex;
     justify-content: center;
     padding: 1.5em; }
+
+@media (min-width: 1200px) {
+  .header {
+    background-image: url(../assets/bg-header-desktop.png); }
+
+  .workflow-item {
+    width: 30%; }
+
+  .snippets-details {
+    display: flex;
+    align-items: center; }
+    .snippets-details-description {
+      text-align: start;
+      margin-left: 10rem; }
+    .snippets-details > img {
+      padding: 0;
+      margin-left: -4.5rem;
+      width: 107%; }
+
+  .partners-items {
+    flex-direction: row; }
+
+  .footer-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+  .footer-links li {
+    display: inline-block; } }
 
 /*# sourceMappingURL=style.css.map */
