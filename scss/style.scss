@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import 'layout';
 @import 'buttons';
 
@@ -12,20 +13,34 @@
         margin-top: 4.5rem;
     }
 }
+.snippets-details {
 
-.snippets-details-description {
-    margin-top: 2.5rem;
+    & > img {
+        padding: 1rem;
+    }
+
+    &-description {
+        margin-top: 2.5rem;
+        margin-left: 1rem;
+    }
+}
+.workflow-list {
+    @include flex;
+
+    .workflow-item {
+        @include flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
 }
 
 .partners-items {
-    display: flex;
+    @include flex;
     flex-direction: column;
-    align-items: center;
-
+    justify-content: space-around;
+   
     img {
-        width: 25%;
-        height: 25%;
-        margin-top: 4.5rem;
+        margin: 4.5rem 0;
     }
 }
 
@@ -42,12 +57,53 @@
     }
 
     .footer-links {
-        padding: 1em;
+        padding: 1em 0;
     }
 
     .footer-social-links {
         display: flex;
         justify-content: center;
         padding: 1.5em;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .header {
+        background-image: url(../assets/bg-header-desktop.png);
+    }
+
+    .workflow-item {
+        width: 30%;
+    }
+
+    .snippets-details {
+        display: flex;
+        align-items: center;
+        
+        &-description {
+            text-align: start;
+            margin-left: 10rem;
+        }
+        
+        & > img {
+            padding: 0;
+            margin-left: -4.5rem;
+            width: 107%;
+        }
+    }
+
+     .partners-items {
+        flex-direction: row;
+    }
+
+    .footer-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer-links li {
+        display: inline-block;
     }
 }

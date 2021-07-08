@@ -45,6 +45,10 @@ li {
 a {
     text-decoration: none;
     color: $heading-color;
+
+    &:hover {
+        color: $btn-primary;
+    }
 }
 
 img {

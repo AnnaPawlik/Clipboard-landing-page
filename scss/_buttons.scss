@@ -1,7 +1,8 @@
 .button {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     margin-top: 3rem;
+    flex-wrap: wrap;
 
     .btn {
         border: none;
@@ -11,6 +12,7 @@
         color: $btn-text;
         margin: 5px;
         cursor: pointer;
+        min-width: 250px;
     }
 
     .btn-ios {
